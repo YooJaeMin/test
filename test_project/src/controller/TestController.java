@@ -13,13 +13,10 @@ import org.springframework.web.servlet.ModelAndView;
 import services.TestService;
 
 @Controller
+@RequestMapping("/views/beer")
 public class TestController {
 	@Autowired
 	TestService ts;
-
-	
-	@RequestMapping("/beer/result")
-	public ModelAndView listHandle(){
 
 
 	@RequestMapping("/result")
@@ -32,7 +29,7 @@ public class TestController {
 		List ale = ts.getStyleList("ALE");
 		List score = ts.getScoreList();
 		
-		ModelAndView mav = new ModelAndView("/beer/result");
+		ModelAndView mav = new ModelAndView("/result.jsp");
 		//리스트 목록
 		mav.addObject("allList", allList);
 		mav.addObject("alchorList", alchor);
