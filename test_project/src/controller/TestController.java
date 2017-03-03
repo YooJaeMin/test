@@ -19,6 +19,7 @@ public class TestController {
 	@RequestMapping("/beer/list")
 	public ModelAndView listHandle(){
 		ModelAndView mav = new ModelAndView();
+		
 		return mav;
 	}
 	
