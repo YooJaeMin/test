@@ -16,7 +16,7 @@ public class TestController {
 	@Autowired
 	TestService ts;
 	
-	@RequestMapping("/beer/result")
+	@RequestMapping("/views/beer/result")
 	public ModelAndView listHandle(){
 		List allList = ts.getAll();
 		List alchor  = ts.getalchorList();
@@ -26,7 +26,7 @@ public class TestController {
 		List ale = ts.getStyleList("ALE");
 		List score = ts.getScoreList();
 		
-		ModelAndView mav = new ModelAndView("/beer/result");
+		ModelAndView mav = new ModelAndView("/views/beer/result");
 		//리스트 목록
 		mav.addObject("allList", allList);
 		mav.addObject("alchorList", alchor);
