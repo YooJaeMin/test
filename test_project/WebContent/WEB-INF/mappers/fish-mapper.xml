@@ -8,7 +8,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<select id="alchorList"  resultType="java.util.HashMap">
-		select * from fishbeer order by alchor decs
+		select * from fishbeer order by alchor desc
 	</select>
 	
 	<select id="styleList" parameterType="java.util.HashMap" resultType="java.util.HashMap">

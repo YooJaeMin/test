@@ -30,7 +30,7 @@ public class TestController {
 		List ale = ts.getStyleList("ALE");
 		List score = ts.getScoreList();
 		
-		ModelAndView mav = new ModelAndView("/result.jsp");
+		ModelAndView mav = new ModelAndView("result.jsp");
 		//리스트 목록
 		mav.addObject("allList", allList);
 		mav.addObject("alchorList", alchor);
