@@ -22,7 +22,6 @@ public class TestController {
 	public ModelAndView listHandle(){
 
 
-	
 	@RequestMapping("/result")
 	public ModelAndView listHandle() {
 		List allList = ts.getAll();
