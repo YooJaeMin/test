@@ -3,21 +3,22 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <div align="center">
 	<h1>Beer Ranking</h1>
 	<hr />
 	<!-- 전체 -->
 	<h2 id="sle1">전체 맥주리스트</h2>
-	<div class="terms_box" id="eff1"
-		style="display: none; max-height: 70%; overflow: scroll;">
+	<div class="terms_box" id="eff1"  
+		style="display: none; max-height: 70%;  overflow: auto; margin: 20 600; text-align: left; font-weight: bold;">
 		<!-- max가 넘어가는 부분은 스크롤 처리 하겠다 -->
 		<c:forEach items="${allList }" var="item1" varStatus="vs">
 			<span id="all_span_${vs.index }">${vs.count }위. ${item1.NAME }
 				▼</span>
 			<br />
-			<div style="display: none; border: solid;" id="all_${vs.index }">
+			<div  align="center" style="display: none; font-weight: normal; margin: 20 -100;  " id="all_${vs.index }">
 				ALCHOR : ${item1.ALCHOR }% / STYLE : ${item1.STYLE } <br /> SCORE :
-				${item1.SCORE }<br /> <img src="${item1.IMG }" style="" /><br />
+				${item1.SCORE }<br /> <img src="${item1.IMG }" style="width:150px; " /><br />
 			</div>
 		</c:forEach>
 
