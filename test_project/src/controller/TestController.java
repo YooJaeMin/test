@@ -16,9 +16,15 @@ import services.TestService;
 public class TestController {
 	@Autowired
 	TestService ts;
+
 	
 	@RequestMapping("/beer/result")
 	public ModelAndView listHandle(){
+
+
+	
+	@RequestMapping("/result")
+	public ModelAndView listHandle() {
 		List allList = ts.getAll();
 		List alchor  = ts.getalchorList();
 		List ipa = ts.getStyleList("IPA");
