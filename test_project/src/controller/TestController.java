@@ -17,6 +17,7 @@ public class TestController {
 	@Autowired
 	TestService ts;
 
+
 	@RequestMapping("/result")
 	public ModelAndView listHandle() {
 		List allList = ts.getAll();
