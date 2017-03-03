@@ -18,7 +18,7 @@ public class TestService {
 	public List<Map> getAll() {
 		List<Map> list = new ArrayList<>();
 		SqlSession session = factory.openSession();
-		list = session.selectList("mappers.fish-mapper.getList");
+		list = session.selectList("mappers.fish.getList");
 		session.close();
 		return list;
 	}
@@ -26,7 +26,7 @@ public class TestService {
 	public List<Map> getalchorList() {
 		List<Map> list = new ArrayList<>();
 		SqlSession session = factory.openSession();
-		list = session.selectList("mappers.fish-mapper.alchorList");
+		list = session.selectList("mappers.fish.alchorList");
 		session.close();
 		return list;
 	}

@@ -1,5 +1,6 @@
 package controller;
 
+
 import java.util.List;
 import java.util.Map;
 
@@ -12,23 +13,22 @@ import org.springframework.web.servlet.ModelAndView;
 import services.TestService;
 
 @Controller
-@RequestMapping("/views/beer")
 public class TestController {
 	@Autowired
 	TestService ts;
-
-	@RequestMapping("/result")
-	public ModelAndView listHandle() {
+	
+	@RequestMapping("/beer/result")
+	public ModelAndView listHandle(){
 		List allList = ts.getAll();
-		List alchor = ts.getalchorList();
+		List alchor  = ts.getalchorList();
 		List ipa = ts.getStyleList("IPA");
 		List stout = ts.getStyleList("STOUT");
 		List pilsner = ts.getStyleList("PILSNER");
 		List ale = ts.getStyleList("ALE");
 		List score = ts.getScoreList();
-
-		ModelAndView mav = new ModelAndView("/result.jsp");
-		// 리스트 목록
+		
+		ModelAndView mav = new ModelAndView("/beer/result");
+		//리스트 목록
 		mav.addObject("allList", allList);
 		mav.addObject("alchorList", alchor);
 		mav.addObject("styleListI", ipa);
@@ -36,18 +36,18 @@ public class TestController {
 		mav.addObject("styleListP", pilsner);
 		mav.addObject("styleListA", ale);
 		mav.addObject("scoreList", score);
-
+		
 		return mav;
 	}
-
-	@RequestMapping("/search")
-	public ModelAndView searchHandle(@RequestParam Map map) {
+	
+	@RequestMapping("/beer/search")
+	public ModelAndView searchHandle(@RequestParam Map map){
 		ModelAndView mav = new ModelAndView();
 		return mav;
 	}
-
-	@RequestMapping("/insert")
-	public ModelAndView insertHandle() {
+	
+	@RequestMapping("/beer/insert")
+	public ModelAndView insertHandle(){
 		ModelAndView mav = new ModelAndView();
 		return mav;
 	}
