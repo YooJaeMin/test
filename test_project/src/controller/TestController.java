@@ -28,6 +28,7 @@ public class TestController {
 		List score = ts.getScoreList();
 		
 		ModelAndView mav = new ModelAndView("/beer/result");
+		//리스트 목록
 		mav.addObject("allList", allList);
 		mav.addObject("alchorList", alchor);
 		mav.addObject("styleListI", ipa);
