@@ -15,4 +15,9 @@ public class TestService {
 		List<Map> list = new ArrayList<>();
 		return list;
 	}
+	
+	public Boolean insertOne() {
+		Boolean b = true;
+		return b;
+	}
 }
