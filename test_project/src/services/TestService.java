@@ -1,5 +1,7 @@
 package services;
 
+import java.util.*;
+
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,4 +10,14 @@ import org.springframework.stereotype.Service;
 public class TestService {
 	@Autowired
 	SqlSessionFactory factory;
+	
+	public List<Map> getAll() {
+		List<Map> list = new ArrayList<>();
+		return list;
+	}
+	
+	public Boolean insertOne() {
+		Boolean b = true;
+		return b;
+	}
 }
