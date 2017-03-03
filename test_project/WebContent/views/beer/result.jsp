@@ -16,7 +16,7 @@
 			<span id="all_span_${vs.index }">${vs.count }위. ${item1.NAME }
 				▼</span>
 			<br />
-			<div  align="center" style="display: none; font-weight: normal; margin: 20 -100;  " id="all_${vs.index }">
+			<div align="center" style="display: none; font-weight: normal; margin: 20 -100;  " id="all_${vs.index }">
 				ALCHOR : ${item1.ALCHOR }% / STYLE : ${item1.STYLE } <br /> SCORE :
 				${item1.SCORE }<br /> <img src="${item1.IMG }" style="width:150px; " /><br />
 			</div>
