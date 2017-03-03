@@ -36,7 +36,7 @@ public class TestService {
 		HashMap map = new HashMap();
 		map.put("style", style);
 		SqlSession session = factory.openSession();
-		list = session.selectList("mappers.fish-mapper.styleList",map);
+		list = session.selectList("mappers.fish.styleList",map);
 		session.close();
 		return list;
 	}
@@ -44,7 +44,7 @@ public class TestService {
 	public List<Map> getScoreList() {
 		List<Map> list = new ArrayList<>();
 		SqlSession session = factory.openSession();
-		list = session.selectList("mappers.fish-mapper.scoreList");
+		list = session.selectList("mappers.fish.scoreList");
 		session.close();
 		return list;
 	}
